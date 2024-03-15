@@ -251,7 +251,7 @@ span {
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 2.5rem;
-  margin-left: 325px;
+  /* margin-left: 325px; */
 }
 
 .project-container .project-card {
