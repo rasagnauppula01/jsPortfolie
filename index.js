@@ -1,6 +1,10 @@
+// Selecting DOM Elements:
 let menuIcon = document.querySelector("#menu-bar-icone");
 let navbar = document.querySelector(".navbar-container");
 
+// Toggle Menu Icon and Navbar:
+// When the menu icon is clicked (menuIcon.onclick), it toggles a class (fa-xmark) on the menu icon itself, 
+// and it toggles an active class on the navbar container. This class toggling is achieved through classList.toggle() method.
 menuIcon.onclick = () => {
   menuIcon.classList.toggle("fa-xmark");
   navbar.classList.toggle("active");
@@ -9,6 +13,7 @@ menuIcon.onclick = () => {
 let sections = document.querySelectorAll("section");
 let navLinks = document.querySelectorAll("header nav a");
 
+// Scroll Event:
 window.onscroll = () => {
   sections.forEach((sec) => {
     let top = window.scrollY;
@@ -33,6 +38,7 @@ window.onscroll = () => {
   navbar.classList.remove("active");
 };
 
+// Scroll Reveal Animation: The script uses the ScrollReveal library to animate certain elements on scroll.
 ScrollReveal({
   distance: "80px",
   duration: 2000,
@@ -50,3 +56,14 @@ ScrollReveal().reveal(".home-container h1, .about-img, .contact form", {
 ScrollReveal().reveal(".home-container p, .about-container", {
   origin: "right",
 });
+
+
+
+
+
+// The JavaScript code handles the following functionalities:
+
+// Toggling the mobile menu.
+// Highlighting the active section in the navigation menu as the user scrolls.
+// Adding a sticky behavior to the header on scroll.
+// Animating certain elements on scroll using the ScrollReveal library.
